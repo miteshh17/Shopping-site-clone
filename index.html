@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <h1>Dummy Dress Shop</h1>
+        <h1>Dress Shop</h1>
+        <button id="cart-button" onclick="toggleCart()">Cart</button>
     </header>
     <main>
         <div class="dress" id="dress1">
@@ -23,10 +24,13 @@
             <p>Rs 59.99</p>
             <button onclick="addToCart('Blue Dress', 59.99, 'https://via.placeholder.com/200')">Add to Cart</button>
         </div>
+        <!-- Add more dresses as needed -->
     </main>
-    <aside>
+    <aside id="cart" style="display:none;">
         <h2>Shopping Cart</h2>
-        <ul id="cart"></ul>
+        <ul id="cart-items">
+            <!-- Cart items will appear here -->
+        </ul>
         <p>Total: Rs <span id="total">0.00</span></p>
         <button id="buy-now" onclick="buyNow()" style="display: none;">Buy Now</button>
     </aside>
