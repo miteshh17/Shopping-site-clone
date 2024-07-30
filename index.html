@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Shopping Site</title>
+    <link rel="stylesheet" href="file2.css">
+</head>
+<body>
+    <header>
+        <h1>Dummy Dress Shop</h1>
+    </header>
+    <main>
+        <div class="dress" id="dress1">
+            <img src="https://via.placeholder.com/200" alt="Dress 1">
+            <h2>Red Dress</h2>
+            <p>Rs 49.99</p>
+            <button onclick="addToCart('Red Dress', 49.99, 'https://via.placeholder.com/200')">Add to Cart</button>
+        </div>
+        <div class="dress" id="dress2">
+            <img src="https://via.placeholder.com/200" alt="Dress 2">
+            <h2>Blue Dress</h2>
+            <p>Rs 59.99</p>
+            <button onclick="addToCart('Blue Dress', 59.99, 'https://via.placeholder.com/200')">Add to Cart</button>
+        </div>
+    </main>
+    <aside>
+        <h2>Shopping Cart</h2>
+        <ul id="cart"></ul>
+        <p>Total: Rs <span id="total">0.00</span></p>
+        <button id="buy-now" onclick="buyNow()" style="display: none;">Buy Now</button>
+    </aside>
+    <script src="file3.js"></script>
+</body>
+</html>
