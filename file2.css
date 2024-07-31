@@ -6,21 +6,20 @@ body {
 }
 
 header {
-    background-color: #f8f9fa;
+    background: url('https://www.zifiti.com/images/banner_ctg_41.jpg') no-repeat center center;
+    background-size: cover;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid #e9ecef;
-}
-
-h1 {
-    margin: 0;
+    position: relative;
+    height: 200px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #3cc882;
     color: white;
     border: none;
     border-radius: 5px;
@@ -28,25 +27,53 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #3cc068;
+}
+
+#cart-button {
+    position:fixed;
+    left: 20px;
+    background-color: #28a745;
+}
+
+#cart-button:hover {
+    background-color: #493fa7;
 }
 
 main {
     display: flex;
+    background-color: #f1ead8;
     justify-content: space-around;
     padding: 20px;
 }
 
 .dress {
-    border: 1px solid #e9ecef;
+    border: 1px solid #000;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: center; 
 }
 
 .dress img {
-    max-width: 100%;
-    height: auto;
+    max-width: 50%;
+    height: 50%;
+}
+
+.price {
+    color: #ff5722;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+}
+
+.discount {
+    color: #388e3c;
+    margin-left: 10px;
 }
 
 aside {
@@ -61,10 +88,29 @@ aside {
     overflow-y: auto;
 }
 
-#cart-button {
-    background-color: #28a745;
+#continue-shopping {
+    background-color: #ffc107;
 }
 
-#cart-button:hover {
-    background-color: #218838;
+#continue-shopping:hover {
+    background-color: #e0a800;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    margin-right: 10px;
+}
+
+.remove-button {
+    margin-left: auto;
+    background-color: #dc3545;
+}
+
+.remove-button:hover {
+    background-color: #c82333;
 }
