@@ -7,12 +7,23 @@ function addToCart(name, price, image) {
     updateCart();
 }
 
+function removeFromCart(index) {
+    totalAmount -= cartItems[index].price;
+    cartItems.splice(index, 1);
+    updateCart();
+}
+
 function updateCart() {
     const cart = document.getElementById('cart-items');
     cart.innerHTML = '';
-    cartItems.forEach(item => {
+    cartItems.forEach((item, index) => {
         const li = document.createElement('li');
-        li.innerHTML = `<img src="${item.image}" alt="${item.name}" width="50" height="50"> ${item.name} - Rs ${item.price.toFixed(2)}`;
+        li.className = 'cart-item';
+        li.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" width="50" height="50"> 
+            ${item.name} - Rs ${item.price.toFixed(2)}
+            <button class="remove-button" onclick="removeFromCart(${index})">Remove</button>
+        `;
         cart.appendChild(li);
     });
 
@@ -28,10 +39,13 @@ function updateCart() {
 
 function toggleCart() {
     const cart = document.getElementById('cart');
+    const productList = document.getElementById('product-list');
     if (cart.style.display === 'none' || cart.style.display === '') {
         cart.style.display = 'block';
+        productList.style.display = 'none';
     } else {
         cart.style.display = 'none';
+        productList.style.display = 'flex';
     }
 }
 
